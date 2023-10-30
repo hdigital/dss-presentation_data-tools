@@ -3,6 +3,7 @@
 # pandas
 # altair
 # statsmodels
+decouple
 
 ## Developer tools
 black[jupyter]

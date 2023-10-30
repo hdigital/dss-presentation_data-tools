@@ -1,4 +1,7 @@
 # A Jupyter starter project · 🚀📊
+Add a Zenodo API to an `.env` file to access [Zenodo REST API](https://developers.zenodo.org/) — see [`.env.example`](.env.example)
+
+---
 
 ## Installation · ⚙️
 
