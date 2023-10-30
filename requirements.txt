@@ -1,9 +1,13 @@
 ## Python data analysis (select, some pre-installed in codespace)
-# jupyter
-# pandas
-# altair
+jupyter
+pandas
+altair
+altair_viewer
 # statsmodels
+
+## Python tools
 decouple
+requests
 
 ## Developer tools
 black[jupyter]
