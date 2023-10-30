@@ -1,0 +1,19 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+      "installTinyTex": false
+    }
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "",
+  "postCreateCommand": "cd /workspaces/starter-python/utils ; sh init-codespace.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.codespaces"
+        // see also recommendations for VS Code in extensions.json
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+---
+title: Quarto
+jupyter: python3
+embed-resources: true
+---
+
+Hello Quarto · 📄
+
+```{python}
+print("Hello Python cell 🐍")
+```

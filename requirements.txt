@@ -1,0 +1,10 @@
+## Python data analysis (select, some pre-installed in codespace)
+# jupyter
+# pandas
+# altair
+# statsmodels
+
+## Developer tools
+black[jupyter]
+nbdev
+pre-commit
