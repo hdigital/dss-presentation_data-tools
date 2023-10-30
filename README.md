@@ -6,6 +6,16 @@ quarto render dss-data-presentation.ipynb
 
 Add a Zenodo API to an `.env` file to access [Zenodo REST API](https://developers.zenodo.org/) — see [`.env.example`](.env.example)
 
+Pinned dependencies with [pip-tools](https://github.com/jazzband/pip-tools#requirements-from-requirementsin) defined in `requirements.in`.
+
+```sh
+# install and upgrade dependencies
+python -m piptools compile --generate-hashes --upgrade requirements.in
+
+# sync installed packages with requirements.txt
+python -m piptools sync
+```
+
 ---
 
 ## Installation · ⚙️
