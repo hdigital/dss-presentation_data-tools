@@ -9,8 +9,10 @@ Add a Zenodo API to an `.env` file to access [Zenodo REST API](https://developer
 Pinned dependencies with [pip-tools](https://github.com/jazzband/pip-tools#requirements-from-requirementsin) defined in `requirements.in`.
 
 ```sh
-# install and upgrade dependencies
-python -m piptools compile --generate-hashes --upgrade requirements.in
+python -m pip install pip-tools
+
+# create or upgrade dependencies in 'requirements.txt'
+python -m piptools compile --generate-hashes --allow-unsafe --upgrade requirements.in
 
 # sync installed packages with requirements.txt
 python -m piptools sync

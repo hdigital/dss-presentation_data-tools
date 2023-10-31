@@ -20,6 +20,3 @@ python -m pip install \
 pre-commit install
 nbdev_install_hooks
 pre-commit run --all-files
-
-# configure conda shell for codespace
-conda init bash
