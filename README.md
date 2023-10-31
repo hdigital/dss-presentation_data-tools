@@ -1,24 +1,14 @@
-# A Jupyter starter project · 🚀📊
+# Archiving APIs presentation · 📽️
 
 ```sh
 quarto render dss-data-presentation.ipynb
 ```
 
-Add a Zenodo API to an `.env` file to access [Zenodo REST API](https://developers.zenodo.org/) — see [`.env.example`](.env.example)
-
-Pinned dependencies with [pip-tools](https://github.com/jazzband/pip-tools#requirements-from-requirementsin) defined in `requirements.in`.
-
-```sh
-python -m pip install pip-tools
-
-# create or upgrade dependencies in 'requirements.txt'
-python -m piptools compile --generate-hashes --allow-unsafe --upgrade requirements.in
-
-# sync installed packages with requirements.txt
-python -m piptools sync
-```
+Add a Zenodo API key to an `.env` file to access [Zenodo REST API](https://developers.zenodo.org/) — see [`.env.example`](.env.example)
 
 ---
+
+Template based on __A Jupyter starter project · 🚀📊__
 
 ## Installation · ⚙️
 
@@ -42,20 +32,17 @@ See `init-codespace.sh` and `devcontainer.json`
 
 ## How to · 🤔
 
-Run and clean all Jupyter notebooks in current folder.
+Pin dependencies with [pip-tools](https://github.com/jazzband/pip-tools#requirements-from-requirementsin) defined in `requirements.in`.
 
 ```sh
-jupyter nbconvert --execute --inplace *.ipynb ; nbdev_clean --fname .
+python -m pip install pip-tools
+
+# create or upgrade dependencies in 'requirements.txt'
+python -m piptools compile --generate-hashes --allow-unsafe --upgrade requirements.in
+
+# sync installed packages with requirements.txt
+python -m piptools sync
 ```
-
-Render notebooks with Quarto
-
-```sh
-quarto render quarto.qmd ;
-quarto render jupyter-quarto.ipynb
-```
-
----
 
 Clean a Jupyter notebook with [nbdev_clean](https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html)
 
@@ -76,11 +63,6 @@ pre-commit run --all-files
 
 # pre-commit autoupdate
 ```
-
-## Open issues · ❓
-
-- _nbdev_clean_ hook not reformating notebooks
-- Quarto VS Code extension _Render_ button needs restart of Terminal after codespace creation
 
 ## License · ⚖️
 
