@@ -6,6 +6,7 @@
     "davidanson.vscode-markdownlint",
     "donjayamanne.githistory",
     "eamodio.gitlens",
+    "editorconfig.editorcon",
     "ms-vscode.live-server", // Preview html pages
     "ms-python.flake8", // Python code quality (not Ruff)
     "ms-python.pylint", // Python linter (not Ruff)
