@@ -6,6 +6,10 @@ tmp__*
 .envrc
 .vscode/settings.json
 
+# Quarto
+/.quarto/
+/_site/
+
 
 ## Python ---------------------------------------------------------------------
 ## https://github.com/github/gitignore/blob/main/Python.gitignore

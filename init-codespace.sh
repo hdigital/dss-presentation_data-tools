@@ -17,6 +17,6 @@ python -m pip install \
   --requirement requirements.txt
 
 # install pre-commit hooks and run them on all files
-pre-commit install
+pre-commit install --allow-missing-config
 nbdev_install_hooks
 pre-commit run --all-files
