@@ -3027,7 +3027,7 @@ vertical-align: -.125em;
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
-   
+
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#explore-doi-apis" id="toc-explore-doi-apis" class="nav-link" data-scroll-target="#explore-doi-apis">Explore DOI APIs</a>
@@ -3079,22 +3079,23 @@ vertical-align: -.125em;
              <p>Holger Döring and Wolfgang Zenk-Möltgen </p>
           </div>
   </div>
-    
-  
+
+
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
       <p class="date-modified">November 6, 2023</p>
     </div>
   </div>
-    
+
   </div>
-  
+
 
 </header>
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><a href="https://hdigital.github.io/dss-presentation_data-tools/" class="uri">https://hdigital.github.io/dss-presentation_data-tools/</a></p>
 <p>Notes and code snippets for the DSS <em>data tools</em> presentation on 9. Nov. 2023 by Holger and Wolfgang.</p>
 <p>This is our recently archived work we use as examples.</p>
 <p>ColStudies – Wolfgang</p>
@@ -3229,28 +3230,24 @@ vertical-align: -.125em;
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> CONTENT_TYPES:</span>
 <span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    time.sleep(<span class="dv">2</span>)  <span class="co"># pause to avoid requests limit</span></span>
 <span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    doi_request <span class="op">=</span> get_doi_data(doi, key)</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;## DOI content type: </span><span class="sc">{</span>key<span class="sc">}</span><span class="ch">\n\n</span><span class="sc">{</span>doi_request<span class="sc">.</span>text<span class="sc">}</span><span class="ch">\n\n</span><span class="ss">&quot;</span>)</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">## DataCite API</span></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>https:<span class="op">//</span>support.datacite.org<span class="op">/</span>docs<span class="op">/</span>api<span class="op">-</span>get<span class="op">-</span>doi<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;## DOI content type: </span><span class="sc">{</span>key<span class="sc">}</span><span class="ch">\n\n</span><span class="sc">{</span>doi_request<span class="sc">.</span>text<span class="sc">}</span><span class="ch">\n\n</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>## DOI content type: bibliography
 
-Bederke, P., &amp;amp; Döring, H. (2023). &lt;i&gt;Harmonizing and linking party information: The ESS as an example of complex data linking&lt;/i&gt; (Version v0.1) [Computer software]. Zenodo. https://doi.org/10.5281/ZENODO.8421232
+Bederke, P., &amp;amp; Döring, H. (2023). &lt;i&gt;Linking European Social Survey (ESS) party information&lt;/i&gt; (Version v0.1) [Computer software]. Zenodo. https://doi.org/10.5281/ZENODO.8421232
 
 
 ## DOI content type: bibtex
 
 @misc{https://doi.org/10.5281/zenodo.8421232,
   doi = {10.5281/ZENODO.8421232},
-  url = {https://zenodo.org/record/8421232},
+  url = {https://zenodo.org/doi/10.5281/zenodo.8421232},
   author = {Bederke, Paul and Döring, Holger},
   keywords = {comparative politics, data management, survey data, voting behavior, expert surveys, validation},
-  title = {Harmonizing and linking party information: The ESS as an example of complex data linking},
+  title = {Linking European Social Survey (ESS) party information},
   publisher = {Zenodo},
   year = {2023},
-  copyright = {Open Access}
+  copyright = {MIT License}
 }
 
 
@@ -3258,12 +3255,14 @@ Bederke, P., &amp;amp; Döring, H. (2023). &lt;i&gt;Harmonizing and linking part
 ## DOI content type: ris
 
 TY  - COMP
-T1  - Harmonizing and linking party information: The ESS as an example of complex data linking
+T1  - Linking European Social Survey (ESS) party information
 AU  - Bederke, Paul
 AU  - Döring, Holger
 DO  - 10.5281/ZENODO.8421232
-UR  - https://zenodo.org/record/8421232
-AB  - Combining party information from multiple sources is a work-intensive challenge for quantitative studies of political representation. Differences in the definition of political parties and difficult data structures can make linking party information across datasets challenging. The European Social Survey (ESS) is an example of a prominent data source in political science research whose party information is particularly difficult to work with. Here, we demonstrate how Party Facts, an online infrastructure for combining party information, can be used to link different social science datasets and assess the performance of the linking process. In this article, we discuss the difficulties of complex linking tasks and show how the ESS can be combined with other sources. We have updated the database to include appropriate links for the recent Round 10 of the ESS and provide two examples of complex linking by combining the ESS with the Chapel Hill Expert Survey (CHES) and with the Parliament and Government Database (ParlGov).
+UR  - https://zenodo.org/doi/10.5281/zenodo.8421232
+AB  - R code for linking European Social Survey (ESS) party information from Rounds 1–10 with social science datasets through Party Facts.
+Two examples for linking ESS parties with the Chapel Hill Expert Survey (CHES) and the Parliament and Government Database (ParlGov) are provided in notebooks.
+These examples are presented in a website at hdigital.github.io/ess-linking.
 KW  - comparative politics
 KW  - data management
 KW  - survey data
@@ -3272,7 +3271,7 @@ KW  - expert surveys
 KW  - validation
 PY  - 2023
 PB  - Zenodo
-ER  - 
+ER  -
 
 
 ## DOI content type: json-csl
@@ -3307,12 +3306,12 @@ ER  -
       ]
     ]
   },
-  &quot;abstract&quot;: &quot;Combining party information from multiple sources is a work-intensive challenge for quantitative studies of political representation. Differences in the definition of political parties and difficult data structures can make linking party information across datasets challenging. The European Social Survey (ESS) is an example of a prominent data source in political science research whose party information is particularly difficult to work with. Here, we demonstrate how Party Facts, an online infrastructure for combining party information, can be used to link different social science datasets and assess the performance of the linking process. In this article, we discuss the difficulties of complex linking tasks and show how the ESS can be combined with other sources. We have updated the database to include appropriate links for the recent Round 10 of the ESS and provide two examples of complex linking by combining the ESS with the Chapel Hill Expert Survey (CHES) and with the Parliament and Government Database (ParlGov).&quot;,
+  &quot;abstract&quot;: &quot;R code for linking European Social Survey (ESS) party information from Rounds 1–10 with social science datasets through Party Facts.\nTwo examples for linking ESS parties with the Chapel Hill Expert Survey (CHES) and the Parliament and Government Database (ParlGov) are provided in notebooks.\nThese examples are presented in a website at hdigital.github.io/ess-linking.&quot;,
   &quot;DOI&quot;: &quot;10.5281/ZENODO.8421232&quot;,
   &quot;publisher&quot;: &quot;Zenodo&quot;,
-  &quot;title&quot;: &quot;Harmonizing and linking party information: The ESS as an example of complex data linking&quot;,
-  &quot;URL&quot;: &quot;https://zenodo.org/record/8421232&quot;,
-  &quot;copyright&quot;: &quot;Open Access&quot;,
+  &quot;title&quot;: &quot;Linking European Social Survey (ESS) party information&quot;,
+  &quot;URL&quot;: &quot;https://zenodo.org/doi/10.5281/zenodo.8421232&quot;,
+  &quot;copyright&quot;: &quot;MIT License&quot;,
   &quot;version&quot;: &quot;v0.1&quot;
 }
 
@@ -3323,13 +3322,9 @@ ER  -
   &quot;@context&quot;: &quot;http://schema.org&quot;,
   &quot;@type&quot;: &quot;SoftwareSourceCode&quot;,
   &quot;@id&quot;: &quot;https://doi.org/10.5281/zenodo.8421232&quot;,
-  &quot;identifier&quot;: {
-    &quot;@type&quot;: &quot;PropertyValue&quot;,
-    &quot;propertyID&quot;: &quot;URL&quot;,
-    &quot;value&quot;: &quot;https://zenodo.org/record/8421233&quot;
-  },
-  &quot;url&quot;: &quot;https://zenodo.org/record/8421232&quot;,
-  &quot;name&quot;: &quot;Harmonizing and linking party information: The ESS as an example of complex data linking&quot;,
+  &quot;url&quot;: &quot;https://zenodo.org/doi/10.5281/zenodo.8421232&quot;,
+  &quot;additionalType&quot;: &quot;&quot;,
+  &quot;name&quot;: &quot;Linking European Social Survey (ESS) party information&quot;,
   &quot;author&quot;: [
     {
       &quot;name&quot;: &quot;Paul Bederke&quot;,
@@ -3340,7 +3335,7 @@ ER  -
         &quot;name&quot;: &quot;University of Konstanz, Germany&quot;
       },
       &quot;@type&quot;: &quot;Person&quot;,
-      &quot;@id&quot;: &quot;https://orcid.org/0000-0001-7555-8656&quot;
+      &quot;@id&quot;: &quot;0000-0001-7555-8656&quot;
     },
     {
       &quot;name&quot;: &quot;Holger Döring&quot;,
@@ -3348,14 +3343,15 @@ ER  -
       &quot;familyName&quot;: &quot;Döring&quot;,
       &quot;affiliation&quot;: {
         &quot;@type&quot;: &quot;Organization&quot;,
-        &quot;name&quot;: &quot;GESIS – Leibniz Institute for the Social Sciences, Germany&quot;
+        &quot;@id&quot;: &quot;https://ror.org/018afyw53&quot;,
+        &quot;name&quot;: &quot;GESIS - Leibniz-Institute for the Social Sciences&quot;
       },
       &quot;@type&quot;: &quot;Person&quot;,
-      &quot;@id&quot;: &quot;https://orcid.org/0000-0002-6616-8805&quot;
+      &quot;@id&quot;: &quot;0000-0002-6616-8805&quot;
     }
   ],
-  &quot;description&quot;: &quot;Combining party information from multiple sources is a work-intensive challenge for quantitative studies of political representation. Differences in the definition of political parties and difficult data structures can make linking party information across datasets challenging. The European Social Survey (ESS) is an example of a prominent data source in political science research whose party information is particularly difficult to work with. Here, we demonstrate how Party Facts, an online infrastructure for combining party information, can be used to link different social science datasets and assess the performance of the linking process. In this article, we discuss the difficulties of complex linking tasks and show how the ESS can be combined with other sources. We have updated the database to include appropriate links for the recent Round 10 of the ESS and provide two examples of complex linking by combining the ESS with the Chapel Hill Expert Survey (CHES) and with the Parliament and Government Database (ParlGov).&quot;,
-  &quot;license&quot;: &quot;info:eu-repo/semantics/openAccess&quot;,
+  &quot;description&quot;: &quot;R code for linking European Social Survey (ESS) party information from Rounds 1–10 with social science datasets through Party Facts.\nTwo examples for linking ESS parties with the Chapel Hill Expert Survey (CHES) and the Parliament and Government Database (ParlGov) are provided in notebooks.\nThese examples are presented in a website at hdigital.github.io/ess-linking.&quot;,
+  &quot;license&quot;: &quot;https://opensource.org/licenses/MIT&quot;,
   &quot;version&quot;: &quot;v0.1&quot;,
   &quot;keywords&quot;: &quot;comparative politics, data management, survey data, voting behavior, expert surveys, validation&quot;,
   &quot;datePublished&quot;: &quot;2023-10-09&quot;,
@@ -3653,7 +3649,7 @@ ER  -
 <h3 class="anchored" data-anchor-id="gesis-data">GESIS data</h3>
 <p>We can access GESIS data through the DataCite API by providing the <strong>provider-id</strong> and <strong>client-id</strong>.</p>
 <p>You can explore and try parameters at <a href="https://support.datacite.org/reference/get_dois" class="uri">https://support.datacite.org/reference/get_dois</a></p>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://api.datacite.org/dois&quot;</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {<span class="st">&quot;accept&quot;</span>: <span class="st">&quot;application/vnd.api+json&quot;</span>}</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
@@ -3667,26 +3663,26 @@ ER  -
 <span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>gesis_data <span class="op">=</span> r.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>[record[<span class="st">&quot;id&quot;</span>] <span class="cf">for</span> record <span class="kw">in</span> gesis_data[<span class="st">&quot;data&quot;</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>[&#39;10.4232/1.14165&#39;,
- &#39;10.4232/1.11753&#39;,
- &#39;10.4232/1.10258&#39;,
- &#39;10.4232/1.13652&#39;,
- &#39;10.7802/2396&#39;]</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>[&#39;10.4232/1.6138&#39;,
+ &#39;10.4232/1.11922&#39;,
+ &#39;10.4232/1.6195&#39;,
+ &#39;10.4232/1.14184&#39;,
+ &#39;10.7802/2618&#39;]</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gesis_data[<span class="st">&quot;meta&quot;</span>][<span class="st">&quot;total&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>9442</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>9447</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="14">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gesis_data[<span class="st">&quot;meta&quot;</span>][<span class="st">&quot;resourceTypes&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>[{&#39;id&#39;: &#39;dataset&#39;, &#39;title&#39;: &#39;Dataset&#39;, &#39;count&#39;: 9005},
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>[{&#39;id&#39;: &#39;dataset&#39;, &#39;title&#39;: &#39;Dataset&#39;, &#39;count&#39;: 9010},
  {&#39;id&#39;: &#39;text&#39;, &#39;title&#39;: &#39;Text&#39;, &#39;count&#39;: 436},
  {&#39;id&#39;: &#39;other&#39;, &#39;title&#39;: &#39;Other&#39;, &#39;count&#39;: 1}]</code></pre>
 </div>
@@ -3701,11 +3697,11 @@ ER  -
 <h3 class="anchored" data-anchor-id="record">Record</h3>
 <p>We start by accessing a Zenodo record through the Zenodo API.</p>
 <p><a href="https://developers.zenodo.org/#retrieve37" class="uri">https://developers.zenodo.org/#retrieve37</a></p>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(<span class="st">&quot;https://zenodo.org/api/records/8360299&quot;</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>r.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>{&#39;created&#39;: &#39;2023-09-19T15:15:22.704918+00:00&#39;,
  &#39;modified&#39;: &#39;2023-09-20T14:27:05.762099+00:00&#39;,
  &#39;id&#39;: 8360299,
@@ -3767,12 +3763,12 @@ ER  -
  &#39;status&#39;: &#39;published&#39;,
  &#39;stats&#39;: {&#39;downloads&#39;: 1,
   &#39;unique_downloads&#39;: 1,
-  &#39;views&#39;: 15,
-  &#39;unique_views&#39;: 10,
+  &#39;views&#39;: 17,
+  &#39;unique_views&#39;: 12,
   &#39;version_downloads&#39;: 1,
   &#39;version_unique_downloads&#39;: 1,
-  &#39;version_unique_views&#39;: 10,
-  &#39;version_views&#39;: 15},
+  &#39;version_unique_views&#39;: 12,
+  &#39;version_views&#39;: 17},
  &#39;state&#39;: &#39;done&#39;,
  &#39;submitted&#39;: True}</code></pre>
 </div>
@@ -3782,7 +3778,7 @@ ER  -
 <h3 class="anchored" data-anchor-id="api-key">API key</h3>
 <p>A <a href="https://zenodo.org/account/settings/applications/tokens/new/">Zenodo API key</a> is needed to access most of the REST API.</p>
 <p>Read API key from a local <code>.env</code> not in Git repository with <a href="https://github.com/HBNetwork/python-decouple#how-to-use-python-decouple-with-jupyter">python-decouple</a></p>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> decouple <span class="im">import</span> Config, RepositoryEnv</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3795,89 +3791,82 @@ ER  -
 <h3 class="anchored" data-anchor-id="depositions">Depositions</h3>
 <p><a href="https://developers.zenodo.org/#retrieve" class="uri">https://developers.zenodo.org/#retrieve</a></p>
 <p>Show that the Zenodo API key is needed to access <em>depositions</em>.</p>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;https://zenodo.org/api/deposit/depositions&quot;</span>,</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    params<span class="op">=</span>{<span class="st">&quot;access_token&quot;</span>: <span class="st">&quot;no Zenodo access token provided&quot;</span>},</span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>r.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>{&#39;status&#39;: 403, &#39;message&#39;: &#39;Permission denied.&#39;}</code></pre>
 </div>
 </div>
 <p>Get depositions for API key holder.</p>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;https://zenodo.org/api/deposit/depositions&quot;</span>, params<span class="op">=</span>{<span class="st">&quot;access_token&quot;</span>: ACCESS_TOKEN}</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>r.status_code</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>200</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>depositions <span class="op">=</span> r.json()</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(depositions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>2</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>3</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>depositions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>[{&#39;created&#39;: &#39;2023-10-31T19:20:11.026536+00:00&#39;,
-  &#39;modified&#39;: &#39;2023-10-31T19:20:11.132336+00:00&#39;,
-  &#39;id&#39;: 8421233,
-  &#39;conceptrecid&#39;: &#39;8421232&#39;,
-  &#39;doi&#39;: &#39;10.5281/zenodo.8421233&#39;,
-  &#39;conceptdoi&#39;: &#39;10.5281/zenodo.8421232&#39;,
-  &#39;doi_url&#39;: &#39;https://doi.org/10.5281/zenodo.8421233&#39;,
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>[{&#39;created&#39;: &#39;2023-11-01T11:31:01.496048+00:00&#39;,
+  &#39;modified&#39;: &#39;2023-11-03T09:03:45.386507+00:00&#39;,
+  &#39;id&#39;: 10061174,
+  &#39;conceptrecid&#39;: &#39;10061173&#39;,
+  &#39;doi&#39;: &#39;10.5281/zenodo.10061174&#39;,
+  &#39;conceptdoi&#39;: &#39;10.5281/zenodo.10061173&#39;,
+  &#39;doi_url&#39;: &#39;https://doi.org/10.5281/zenodo.10061174&#39;,
   &#39;metadata&#39;: {&#39;title&#39;: &#39;Harmonizing and linking party information: The ESS as an example of complex data linking&#39;,
-   &#39;doi&#39;: &#39;10.5281/zenodo.8421233&#39;,
+   &#39;doi&#39;: &#39;10.5281/zenodo.10061174&#39;,
    &#39;publication_date&#39;: &#39;2023-10-09&#39;,
    &#39;description&#39;: &#39;&lt;p&gt;Combining party information from multiple sources is a work-intensive challenge for quantitative studies of political representation. Differences in the definition of political parties and difficult data structures can make linking party information across datasets challenging. The European Social Survey (ESS) is an example of a prominent data source in political science research whose party information is particularly difficult to work with. Here, we demonstrate how Party Facts, an online infrastructure for combining party information, can be used to link different social science datasets and assess the performance of the linking process. In this article, we discuss the difficulties of complex linking tasks and show how the ESS can be combined with other sources. We have updated the database to include appropriate links for the recent Round 10 of the ESS and provide two examples of complex linking by combining the ESS with the Chapel Hill Expert Survey (CHES) and with the Parliament and Government Database (ParlGov).&lt;/p&gt;&#39;,
    &#39;access_right&#39;: &#39;open&#39;,
-   &#39;creators&#39;: [{&#39;name&#39;: &#39;Paul Bederke&#39;,
-     &#39;affiliation&#39;: &#39;University of Konstanz, Germany&#39;,
-     &#39;orcid&#39;: &#39;0000-0001-7555-8656&#39;},
-    {&#39;name&#39;: &#39;Holger Döring&#39;,
-     &#39;affiliation&#39;: &#39;GESIS – Leibniz Institute for the Social Sciences, Germany&#39;,
-     &#39;orcid&#39;: &#39;0000-0002-6616-8805&#39;}],
-   &#39;keywords&#39;: [&#39;comparative politics&#39;,
-    &#39;data management&#39;,
-    &#39;survey data&#39;,
-    &#39;voting behavior&#39;,
-    &#39;expert surveys&#39;,
-    &#39;validation&#39;],
-   &#39;related_identifiers&#39;: [{&#39;identifier&#39;: &#39;https://github.com/hdigital/ess-linking/tree/v0.1&#39;,
-     &#39;relation&#39;: &#39;isSupplementTo&#39;,
-     &#39;scheme&#39;: &#39;url&#39;}],
-   &#39;version&#39;: &#39;v0.1&#39;,
-   &#39;license&#39;: &#39;other-open&#39;,
+   &#39;creators&#39;: [{&#39;name&#39;: &#39;Bederke, Paul&#39;,
+     &#39;affiliation&#39;: &#39;University of Konstanz&#39;},
+    {&#39;name&#39;: &#39;Döring, Holger&#39;,
+     &#39;affiliation&#39;: &#39;GESIS - Leibniz-Institute for the Social Sciences&#39;}],
+   &#39;related_identifiers&#39;: [{&#39;identifier&#39;: &#39;10.5281/zenodo.8421233&#39;,
+     &#39;relation&#39;: &#39;isSupplementedBy&#39;,
+     &#39;resource_type&#39;: &#39;software&#39;,
+     &#39;scheme&#39;: &#39;doi&#39;}],
+   &#39;license&#39;: &#39;cc-by-4.0&#39;,
    &#39;imprint_publisher&#39;: &#39;Zenodo&#39;,
-   &#39;upload_type&#39;: &#39;software&#39;,
-   &#39;prereserve_doi&#39;: {&#39;doi&#39;: &#39;10.5281/zenodo.8421233&#39;, &#39;recid&#39;: 8421233}},
+   &#39;upload_type&#39;: &#39;publication&#39;,
+   &#39;publication_type&#39;: &#39;preprint&#39;,
+   &#39;prereserve_doi&#39;: {&#39;doi&#39;: &#39;10.5281/zenodo.10061174&#39;, &#39;recid&#39;: 10061174}},
   &#39;title&#39;: &#39;Harmonizing and linking party information: The ESS as an example of complex data linking&#39;,
-  &#39;links&#39;: {&#39;self&#39;: &#39;https://zenodo.org/api/records/8421233&#39;,
-   &#39;html&#39;: &#39;https://zenodo.org/records/8421233&#39;,
-   &#39;doi&#39;: &#39;https://doi.org/10.5281/zenodo.8421233&#39;,
-   &#39;parent_doi&#39;: &#39;https://zenodo.org/doi/10.5281/zenodo.8421232&#39;,
-   &#39;badge&#39;: &#39;https://zenodo.org/badge/doi/10.5281%2Fzenodo.8421233.svg&#39;,
-   &#39;conceptbadge&#39;: &#39;https://zenodo.org/badge/doi/10.5281%2Fzenodo.8421232.svg&#39;,
-   &#39;files&#39;: &#39;https://zenodo.org/api/records/8421233/files&#39;,
-   &#39;latest_draft&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233&#39;,
-   &#39;latest_draft_html&#39;: &#39;https://zenodo.org/deposit/8421233&#39;,
-   &#39;publish&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/publish&#39;,
-   &#39;edit&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/edit&#39;,
-   &#39;discard&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/discard&#39;,
-   &#39;newversion&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/newversion&#39;,
-   &#39;registerconceptdoi&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/registerconceptdoi&#39;,
-   &#39;record&#39;: &#39;https://zenodo.org/api/records/8421233&#39;,
-   &#39;record_html&#39;: &#39;https://zenodo.org/record/8421233&#39;,
-   &#39;latest&#39;: &#39;https://zenodo.org/api/records/8421233/versions/latest&#39;,
-   &#39;latest_html&#39;: &#39;https://zenodo.org/record/8421233/versions/latest&#39;},
-  &#39;record_id&#39;: 8421233,
+  &#39;links&#39;: {&#39;self&#39;: &#39;https://zenodo.org/api/records/10061174&#39;,
+   &#39;html&#39;: &#39;https://zenodo.org/records/10061174&#39;,
+   &#39;doi&#39;: &#39;https://doi.org/10.5281/zenodo.10061174&#39;,
+   &#39;parent_doi&#39;: &#39;https://zenodo.org/doi/10.5281/zenodo.10061173&#39;,
+   &#39;badge&#39;: &#39;https://zenodo.org/badge/doi/10.5281%2Fzenodo.10061174.svg&#39;,
+   &#39;conceptbadge&#39;: &#39;https://zenodo.org/badge/doi/10.5281%2Fzenodo.10061173.svg&#39;,
+   &#39;files&#39;: &#39;https://zenodo.org/api/records/10061174/files&#39;,
+   &#39;latest_draft&#39;: &#39;https://zenodo.org/api/deposit/depositions/10061174&#39;,
+   &#39;latest_draft_html&#39;: &#39;https://zenodo.org/deposit/10061174&#39;,
+   &#39;publish&#39;: &#39;https://zenodo.org/api/deposit/depositions/10061174/actions/publish&#39;,
+   &#39;edit&#39;: &#39;https://zenodo.org/api/deposit/depositions/10061174/actions/edit&#39;,
+   &#39;discard&#39;: &#39;https://zenodo.org/api/deposit/depositions/10061174/actions/discard&#39;,
+   &#39;newversion&#39;: &#39;https://zenodo.org/api/deposit/depositions/10061174/actions/newversion&#39;,
+   &#39;registerconceptdoi&#39;: &#39;https://zenodo.org/api/deposit/depositions/10061174/actions/registerconceptdoi&#39;,
+   &#39;record&#39;: &#39;https://zenodo.org/api/records/10061174&#39;,
+   &#39;record_html&#39;: &#39;https://zenodo.org/record/10061174&#39;,
+   &#39;latest&#39;: &#39;https://zenodo.org/api/records/10061174/versions/latest&#39;,
+   &#39;latest_html&#39;: &#39;https://zenodo.org/record/10061174/versions/latest&#39;},
+  &#39;record_id&#39;: 10061174,
   &#39;owner&#39;: 399146,
   &#39;files&#39;: [],
   &#39;state&#39;: &#39;done&#39;,
@@ -3928,6 +3917,67 @@ ER  -
   &#39;owner&#39;: 399146,
   &#39;files&#39;: [],
   &#39;state&#39;: &#39;done&#39;,
+  &#39;submitted&#39;: True},
+ {&#39;created&#39;: &#39;2023-10-09T11:48:42.068068+00:00&#39;,
+  &#39;modified&#39;: &#39;2023-11-03T16:38:11.915812+00:00&#39;,
+  &#39;id&#39;: 8421233,
+  &#39;conceptrecid&#39;: &#39;8421232&#39;,
+  &#39;doi&#39;: &#39;10.5281/zenodo.8421233&#39;,
+  &#39;conceptdoi&#39;: &#39;10.5281/zenodo.8421232&#39;,
+  &#39;doi_url&#39;: &#39;https://doi.org/10.5281/zenodo.8421233&#39;,
+  &#39;metadata&#39;: {&#39;title&#39;: &#39;Linking European Social Survey (ESS) party information&#39;,
+   &#39;doi&#39;: &#39;10.5281/zenodo.8421233&#39;,
+   &#39;publication_date&#39;: &#39;2023-10-09&#39;,
+   &#39;description&#39;: &#39;&lt;p&gt;R code for linking &lt;a href=&quot;https://www.europeansocialsurvey.org/&quot;&gt;European Social Survey (ESS)&lt;/a&gt; party information from Rounds 1–10 with social science datasets through &lt;a href=&quot;partyfacts.org&quot;&gt;Party Facts&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Two examples for linking ESS parties with the &lt;a href=&quot;https://www.chesdata.eu/&quot;&gt;Chapel Hill Expert Survey (CHES)&lt;/a&gt; and the &lt;a href=&quot;parlgov.org&quot;&gt;Parliament and Government Database (ParlGov)&lt;/a&gt; are provided in notebooks.&lt;/p&gt;&lt;p&gt;These examples are presented in a website at &lt;a href=&quot;https://hdigital.github.io/ess-linking/&quot;&gt;hdigital.github.io/ess-linking&lt;/a&gt;.&lt;/p&gt;&#39;,
+   &#39;access_right&#39;: &#39;open&#39;,
+   &#39;creators&#39;: [{&#39;name&#39;: &#39;Bederke, Paul&#39;,
+     &#39;affiliation&#39;: &#39;University of Konstanz, Germany&#39;,
+     &#39;orcid&#39;: &#39;0000-0001-7555-8656&#39;},
+    {&#39;name&#39;: &#39;Döring, Holger&#39;,
+     &#39;affiliation&#39;: &#39;GESIS - Leibniz-Institute for the Social Sciences&#39;,
+     &#39;orcid&#39;: &#39;0000-0002-6616-8805&#39;}],
+   &#39;keywords&#39;: [&#39;comparative politics&#39;,
+    &#39;data management&#39;,
+    &#39;survey data&#39;,
+    &#39;voting behavior&#39;,
+    &#39;expert surveys&#39;,
+    &#39;validation&#39;],
+   &#39;related_identifiers&#39;: [{&#39;identifier&#39;: &#39;https://github.com/hdigital/ess-linking/tree/v0.1&#39;,
+     &#39;relation&#39;: &#39;isSupplementTo&#39;,
+     &#39;scheme&#39;: &#39;url&#39;}],
+   &#39;version&#39;: &#39;v0.1&#39;,
+   &#39;license&#39;: &#39;mit-license&#39;,
+   &#39;imprint_publisher&#39;: &#39;Zenodo&#39;,
+   &#39;upload_type&#39;: &#39;software&#39;,
+   &#39;prereserve_doi&#39;: {&#39;doi&#39;: &#39;10.5281/zenodo.8421233&#39;, &#39;recid&#39;: 8421233}},
+  &#39;title&#39;: &#39;Linking European Social Survey (ESS) party information&#39;,
+  &#39;links&#39;: {&#39;self&#39;: &#39;https://zenodo.org/api/records/8421233&#39;,
+   &#39;html&#39;: &#39;https://zenodo.org/records/8421233&#39;,
+   &#39;doi&#39;: &#39;https://doi.org/10.5281/zenodo.8421233&#39;,
+   &#39;parent_doi&#39;: &#39;https://zenodo.org/doi/10.5281/zenodo.8421232&#39;,
+   &#39;badge&#39;: &#39;https://zenodo.org/badge/doi/10.5281%2Fzenodo.8421233.svg&#39;,
+   &#39;conceptbadge&#39;: &#39;https://zenodo.org/badge/doi/10.5281%2Fzenodo.8421232.svg&#39;,
+   &#39;files&#39;: &#39;https://zenodo.org/api/records/8421233/files&#39;,
+   &#39;latest_draft&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233&#39;,
+   &#39;latest_draft_html&#39;: &#39;https://zenodo.org/deposit/8421233&#39;,
+   &#39;publish&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/publish&#39;,
+   &#39;edit&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/edit&#39;,
+   &#39;discard&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/discard&#39;,
+   &#39;newversion&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/newversion&#39;,
+   &#39;registerconceptdoi&#39;: &#39;https://zenodo.org/api/deposit/depositions/8421233/actions/registerconceptdoi&#39;,
+   &#39;record&#39;: &#39;https://zenodo.org/api/records/8421233&#39;,
+   &#39;record_html&#39;: &#39;https://zenodo.org/record/8421233&#39;,
+   &#39;latest&#39;: &#39;https://zenodo.org/api/records/8421233/versions/latest&#39;,
+   &#39;latest_html&#39;: &#39;https://zenodo.org/record/8421233/versions/latest&#39;},
+  &#39;record_id&#39;: 8421233,
+  &#39;owner&#39;: 399146,
+  &#39;files&#39;: [{&#39;id&#39;: &#39;2b03a282-bd30-4a15-a843-3dd59f482323&#39;,
+    &#39;filename&#39;: &#39;hdigital/ess-linking-v0.1.zip&#39;,
+    &#39;filesize&#39;: 3061494,
+    &#39;checksum&#39;: &#39;d615e35168eddbca6efb5c5fb636d1b4&#39;,
+    &#39;links&#39;: {&#39;self&#39;: &#39;https://zenodo.org/api/records/8421233/files/2b03a282-bd30-4a15-a843-3dd59f482323&#39;,
+     &#39;download&#39;: &#39;https://zenodo.org/api/records/8421233/draft/files/hdigital/ess-linking-v0.1.zip/content&#39;}}],
+  &#39;state&#39;: &#39;done&#39;,
   &#39;submitted&#39;: True}]</code></pre>
 </div>
 </div>
@@ -3938,7 +3988,7 @@ ER  -
 <section id="get-records" class="level4">
 <h4 class="anchored" data-anchor-id="get-records">Get records</h4>
 <p>Get records for all GESIS members.</p>
-<div class="cell" data-execution_count="14">
+<div class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>records_api_url <span class="op">=</span> <span class="st">&quot;https://zenodo.org/api/records&quot;</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>search_query <span class="op">=</span> <span class="st">&#39;creators.affiliation:(&quot;GESIS&quot;)&#39;</span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {<span class="st">&quot;q&quot;</span>: search_query, <span class="st">&quot;access_token&quot;</span>: ACCESS_TOKEN}</span>
@@ -3947,9 +3997,9 @@ ER  -
 <span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>gesis_records <span class="op">=</span> r.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="15">
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>gesis_records[<span class="st">&quot;hits&quot;</span>][<span class="st">&quot;hits&quot;</span>][<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>{&#39;created&#39;: &#39;2022-02-03T15:26:38.380712+00:00&#39;,
  &#39;modified&#39;: &#39;2022-03-04T10:58:01.633724+00:00&#39;,
  &#39;id&#39;: 5914219,
@@ -3986,7 +4036,7 @@ ER  -
   &#39;version&#39;: &#39;v0.1.0&#39;,
   &#39;resource_type&#39;: {&#39;title&#39;: &#39;Software&#39;, &#39;type&#39;: &#39;software&#39;},
   &#39;license&#39;: {&#39;id&#39;: &#39;apache2.0&#39;},
-  &#39;communities&#39;: [{&#39;id&#39;: &#39;nfdi&#39;}, {&#39;id&#39;: &#39;konsortswd&#39;}],
+  &#39;communities&#39;: [{&#39;id&#39;: &#39;konsortswd&#39;}, {&#39;id&#39;: &#39;nfdi&#39;}],
   &#39;relations&#39;: {&#39;version&#39;: [{&#39;index&#39;: 0,
      &#39;is_last&#39;: True,
      &#39;parent&#39;: {&#39;pid_type&#39;: &#39;recid&#39;, &#39;pid_value&#39;: &#39;5914218&#39;}}]}},
@@ -4042,7 +4092,7 @@ ER  -
 <section id="extract-names" class="level4">
 <h4 class="anchored" data-anchor-id="extract-names">Extract names</h4>
 <p>Extract <em>creator</em> names from records of GESIS members.</p>
-<div class="cell" data-execution_count="16">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> gesis_records[<span class="st">&quot;hits&quot;</span>][<span class="st">&quot;hits&quot;</span>]:</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">## </span><span class="sc">{</span>record[<span class="st">&#39;doi&#39;</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">[ </span><span class="sc">{</span>record[<span class="st">&#39;title&#39;</span>]<span class="sc">}</span><span class="ss"> ]&quot;</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> creator <span class="kw">in</span> record[<span class="st">&quot;metadata&quot;</span>][<span class="st">&quot;creators&quot;</span>]:</span>
@@ -4059,12 +4109,31 @@ Mühlbauer, Alexander
 Klas, Claus-Peter
 Mutschke, Peter
 
+## 10.5281/zenodo.259554
+[ Rich metadata from the start ]
+Hopt, Oliver
+Klas, Claus-Peter
+Mühlbauer, Alexander
+Zenk-Möltgen, Wolfgang
+
 ## 10.5281/zenodo.6630263
 [ Experiences with converting DDI among versions using DDI-FlatDB ]
 Klas, Claus-Peter
 Hopt, Oliver
 Krämer, Thomas
 Nugraha, Sigit
+
+## 10.5281/zenodo.7023258
+[ Umfrage zur Situation von Professor*innen an einer technischen Hochschule in Deutschland. Fragebogen (deutsche Version) ]
+Geisler, Helena
+Löther, Andrea
+Steinweg, Nina
+
+## 10.5281/zenodo.7024958
+[ Survey on the situation of professors at a technical university in Germany. Questionnaire (English version) ]
+Geisler, Helena
+Löther, Andrea
+Steinweg, Nina
 
 ## 10.5281/zenodo.7220636
 [ UniSAFE D4.1 Final UniSAFE-Survey Questionnaire ]
@@ -4073,43 +4142,6 @@ Schredl, Claudia
 Baumann, Horst
 Lomazzi, Vera
 Freund, Frederike
-
-## 10.5281/zenodo.259554
-[ Rich metadata from the start ]
-Hopt, Oliver
-Klas, Claus-Peter
-Mühlbauer, Alexander
-Zenk-Möltgen, Wolfgang
-
-## 10.5281/zenodo.7024958
-[ Survey on the situation of professors at a technical university in Germany. Questionnaire (English version) ]
-Geisler, Helena
-Löther, Andrea
-Steinweg, Nina
-
-## 10.5281/zenodo.7023258
-[ Umfrage zur Situation von Professor*innen an einer technischen Hochschule in Deutschland. Fragebogen (deutsche Version) ]
-Geisler, Helena
-Löther, Andrea
-Steinweg, Nina
-
-## 10.5281/zenodo.1118382
-[ Progress with the CESSDA Euro Question Bank Project ]
-MahmoudHashemi, Azadeh
-Mühlbauer, Alexander
-Zenk-Möltgen, Wolfgang
-
-## 10.5281/zenodo.1118391
-[ Lessons Learned with Additional Mappings into DDI-FlatDB ]
-Klas, Claus-Peter
-Hopt, Oliver
-Mühlbauer, Alexander
-
-## 10.5281/zenodo.5180976
-[ D4.9 Guidelines on the use of Translation Memories in survey translation ]
-Veronika Keck
-Dorothée Behr
-Brita Dorer
 
 ## 10.5281/zenodo.259565
 [ The Past, Present and Future of Geocoded Survey Data at the GESIS Data Archive ]
@@ -4135,12 +4167,23 @@ Veronika Keck
 Dorothée Behr
 Brita Dorer
 
-## 10.5281/zenodo.7638506
-[ User Guide for the CESSDA Metadata Model version 3.0 ]
-Esra Akdeniz
-Kerrin Borschewski
-Katrin Baum
-Libby Bishop
+## 10.5281/zenodo.1118382
+[ Progress with the CESSDA Euro Question Bank Project ]
+MahmoudHashemi, Azadeh
+Mühlbauer, Alexander
+Zenk-Möltgen, Wolfgang
+
+## 10.5281/zenodo.1118391
+[ Lessons Learned with Additional Mappings into DDI-FlatDB ]
+Klas, Claus-Peter
+Hopt, Oliver
+Mühlbauer, Alexander
+
+## 10.5281/zenodo.5180976
+[ D4.9 Guidelines on the use of Translation Memories in survey translation ]
+Veronika Keck
+Dorothée Behr
+Brita Dorer
 
 ## 10.5281/zenodo.8386418
 [ Total Error Sheets for Datasets (TES-D) zur Dokumentation Digitaler Verhaltensdaten - Eine Kritische Reflektion des Datensammlungsprozesses ]
@@ -4150,59 +4193,66 @@ Soldner, Felix
 Zens, Maria
 Weller, Katrin
 
-## 10.5281/zenodo.1118384
-[ DDI-FlatDB: Next steps ]
-Klas, Claus-Peter
-Hopt, Oliver
+## 10.5281/zenodo.7638506
+[ User Guide for the CESSDA Metadata Model version 3.0 ]
+Esra Akdeniz
+Kerrin Borschewski
+Katrin Baum
+Libby Bishop
 
 ## 10.5281/zenodo.3582020
 [ CESSDA Webinar: The CESSDA EuroQuestionBank: Search, find and reuse questionnaire items from social scientific research ]
 Akdeniz, Esra
 Krämer, Thomas
 
-## 10.5281/zenodo.3597408
-[ DDI based Questionnaire Editor ]
-Klas, Claus-Peter
-Hopt, Oliver
+## 10.5281/zenodo.7464990
+[ European DDI Conference 2022 Training Fair: Overview of the Session ]
+Bishop, Elizabeth
+Zenk-Möltgen, Wolfgang
 
 ## 10.5281/zenodo.4518893
 [ GDPR &amp; Ethical Issues with Social Media Data ]
 Weller, Katrin
 Watteler, Oliver
 
-## 10.5281/zenodo.7464990
-[ European DDI Conference 2022 Training Fair: Overview of the Session ]
-Bishop, Elizabeth
-Zenk-Möltgen, Wolfgang
+## 10.5281/zenodo.1118384
+[ DDI-FlatDB: Next steps ]
+Klas, Claus-Peter
+Hopt, Oliver
 
-## 10.5281/zenodo.3620845
-[ How to deal with Persistent Identifiers? A Survey on PID usage within CESSDA ERIC ]
-Borschewski, Kerrin
-Hausstein, Brigitte
-
-## 10.5281/zenodo.2660928
-[ Which social media interactions indicate positive opinions about cited publications? A comparison of user survey and sentiment analysis ]
-Weller, Katrin
-Zagovora, Olya
-
-## 10.5281/zenodo.3955711
-[ Vortragsfolien KonsortSWD - Konsortium für die Sozial-, Verhaltens-,  Bildungs- und Wirtschaftswissenschaften ]
-Wolf, Christof
-Miller, Bernhard
-
-## 10.5281/zenodo.439699
-[ TokTrack secondary dataset ]
-Fabian Flöck
-Kenan Erdogan
+## 10.5281/zenodo.3597408
+[ DDI based Questionnaire Editor ]
+Klas, Claus-Peter
+Hopt, Oliver
 
 ## 10.5281/zenodo.3781700
 [ Data Sharing in DASISH ]
 Alexia Katsanidou
-Markus Quandt</code></pre>
+Markus Quandt
+
+## 10.5281/zenodo.3776982
+[ Secure Data Solutions for Social Media Data Analysis ]
+David Schiller
+Katharina Kinder-Kurlanda
+
+## 10.5281/zenodo.1118393
+[ Practical Implementations of the DDILimDAS Results at the GESIS Data Archive ]
+Akdeniz, Esra
+Zenk-Möltgen, Wolfgang
+
+## 10.5281/zenodo.1134531
+[ Using DDI to Link Metadata in CharmStats ]
+Winters, Kristi
+Friedrichs, Martin
+
+## 10.5281/zenodo.7149418
+[ Handling Non-source Items in the project OUTCITE ]
+Philipp Mayr
+Tobias Backes</code></pre>
 </div>
 </div>
 <p>Create a list of GESIS authors and Zenodo publications.</p>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gesis_authors <span class="op">=</span> []</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> gesis_records[<span class="st">&quot;hits&quot;</span>][<span class="st">&quot;hits&quot;</span>]:</span>
@@ -4216,9 +4266,9 @@ Markus Quandt</code></pre>
 <span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>                }</span>
 <span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="18">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>gesis_authors[:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>[{&#39;record&#39;: &#39;10.5281/zenodo.5914219&#39;,
   &#39;creator&#39;: &#39;Zhang, Yudong&#39;,
   &#39;type&#39;: &#39;software&#39;},
@@ -4240,31 +4290,31 @@ Markus Quandt</code></pre>
 <section id="analyze-names" class="level4">
 <h4 class="anchored" data-anchor-id="analyze-names">Analyze names</h4>
 <p>Convert list of dictionaries into a data frame with <em>pandas</em>.</p>
-<div class="cell" data-execution_count="19">
+<div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(gesis_authors)</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                    record               creator          type
-0   10.5281/zenodo.5914219         Zhang, Yudong      software
-1   10.5281/zenodo.5914219          Baran, Erdal      software
-2   10.5281/zenodo.5914219       Zloch, Matthäus      software
-3   10.5281/zenodo.5914219  Mühlbauer, Alexander      software
-4   10.5281/zenodo.5914219     Klas, Claus-Peter      software
-..                     ...                   ...           ...
-70  10.5281/zenodo.3955711      Miller, Bernhard  presentation
-71   10.5281/zenodo.439699          Fabian Flöck       dataset
-72   10.5281/zenodo.439699         Kenan Erdogan       dataset
-73  10.5281/zenodo.3781700     Alexia Katsanidou  presentation
-74  10.5281/zenodo.3781700         Markus Quandt  presentation
+<pre><code>                    record                 creator          type
+0   10.5281/zenodo.5914219           Zhang, Yudong      software
+1   10.5281/zenodo.5914219            Baran, Erdal      software
+2   10.5281/zenodo.5914219         Zloch, Matthäus      software
+3   10.5281/zenodo.5914219    Mühlbauer, Alexander      software
+4   10.5281/zenodo.5914219       Klas, Claus-Peter      software
+..                     ...                     ...           ...
+70  10.5281/zenodo.1118393  Zenk-Möltgen, Wolfgang  presentation
+71  10.5281/zenodo.1134531         Winters, Kristi        poster
+72  10.5281/zenodo.1134531      Friedrichs, Martin        poster
+73  10.5281/zenodo.7149418            Philipp Mayr  presentation
+74  10.5281/zenodo.7149418           Tobias Backes  presentation
 
 [75 rows x 3 columns]</code></pre>
 </div>
 </div>
 <p>Determine the number of publications per GESIS author with <em>pandas</em>.</p>
-<div class="cell" data-execution_count="20">
+<div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    df.groupby(<span class="st">&quot;creator&quot;</span>)</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    .size()</span>
@@ -4272,7 +4322,7 @@ Markus Quandt</code></pre>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    .sort_values(by<span class="op">=</span><span class="st">&quot;Count&quot;</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    .head(<span class="dv">10</span>)</span>
 <span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="24">
 <div>
 
 
@@ -4291,37 +4341,37 @@ Markus Quandt</code></pre>
 <td>6</td>
 </tr>
 <tr class="even">
+<td data-quarto-table-cell-role="th">45</td>
+<td>Zenk-Möltgen, Wolfgang</td>
+<td>5</td>
+</tr>
+<tr class="odd">
 <td data-quarto-table-cell-role="th">15</td>
 <td>Hopt, Oliver</td>
 <td>5</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">45</td>
-<td>Zenk-Möltgen, Wolfgang</td>
-<td>4</td>
-</tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">30</td>
+<td data-quarto-table-cell-role="th">29</td>
 <td>Mühlbauer, Alexander</td>
 <td>4</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">42</td>
-<td>Weller, Katrin</td>
+<td data-quarto-table-cell-role="th">0</td>
+<td>Akdeniz, Esra</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Akdeniz, Esra</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">13</td>
+<td data-quarto-table-cell-role="th">14</td>
 <td>Geisler, Helena</td>
 <td>2</td>
 </tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">43</td>
+<td>Weller, Katrin</td>
+<td>2</td>
+</tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">40</td>
+<td data-quarto-table-cell-role="th">41</td>
 <td>Veronika Keck</td>
 <td>2</td>
 </tr>
@@ -4345,29 +4395,29 @@ Markus Quandt</code></pre>
 <section id="visualize-names" class="level4">
 <h4 class="anchored" data-anchor-id="visualize-names">Visualize names</h4>
 <p>Plot the number of publications per author with <em>altair</em>.</p>
-<div class="cell" data-execution_count="21">
+<div class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>(alt.Chart(df).mark_bar().encode(x<span class="op">=</span><span class="st">&quot;count():Q&quot;</span>, y<span class="op">=</span><span class="st">&quot;creator:N&quot;</span>, color<span class="op">=</span><span class="st">&quot;type&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="25">
 
 <style>
-#altair-viz-680b6fa9a72142afae48dc3270574b82.vega-embed {
+#altair-viz-55152bed7c4041f5b42a3bb949537ac0.vega-embed {
 width: 100%;
 display: flex;
 }
-#altair-viz-680b6fa9a72142afae48dc3270574b82.vega-embed details,
-#altair-viz-680b6fa9a72142afae48dc3270574b82.vega-embed details summary {
+#altair-viz-55152bed7c4041f5b42a3bb949537ac0.vega-embed details,
+#altair-viz-55152bed7c4041f5b42a3bb949537ac0.vega-embed details summary {
 position: relative;
 }
 </style>
-<div id="altair-viz-680b6fa9a72142afae48dc3270574b82"></div>
+<div id="altair-viz-55152bed7c4041f5b42a3bb949537ac0"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-680b6fa9a72142afae48dc3270574b82") {
-      outputDiv = document.getElementById("altair-viz-680b6fa9a72142afae48dc3270574b82");
+    if (outputDiv.id !== "altair-viz-55152bed7c4041f5b42a3bb949537ac0") {
+      outputDiv = document.getElementById("altair-viz-55152bed7c4041f5b42a3bb949537ac0");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -4413,7 +4463,7 @@ position: relative;
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-9708bd87c46a931d03ac3796c8613089"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "type", "type": "nominal"}, "x": {"aggregate": "count", "type": "quantitative"}, "y": {"field": "creator", "type": "nominal"}}, "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json", "datasets": {"data-9708bd87c46a931d03ac3796c8613089": [{"record": "10.5281/zenodo.5914219", "creator": "Zhang, Yudong", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Baran, Erdal", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Zloch, Matth\u00e4us", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "M\u00fchlbauer, Alexander", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Klas, Claus-Peter", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Mutschke, Peter", "type": "software"}, {"record": "10.5281/zenodo.6630263", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Kr\u00e4mer, Thomas", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Nugraha, Sigit", "type": "presentation"}, {"record": "10.5281/zenodo.7220636", "creator": "Lipinsky, Anke", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Schredl, Claudia", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Baumann, Horst", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Lomazzi, Vera", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Freund, Frederike", "type": "other"}, {"record": "10.5281/zenodo.259554", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.259554", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.259554", "creator": "M\u00fchlbauer, Alexander", "type": "presentation"}, {"record": "10.5281/zenodo.259554", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.7024958", "creator": "Geisler, Helena", "type": "other"}, {"record": "10.5281/zenodo.7024958", "creator": "L\u00f6ther, Andrea", "type": "other"}, {"record": "10.5281/zenodo.7024958", "creator": "Steinweg, Nina", "type": "other"}, {"record": "10.5281/zenodo.7023258", "creator": "Geisler, Helena", "type": "other"}, {"record": "10.5281/zenodo.7023258", "creator": "L\u00f6ther, Andrea", "type": "other"}, {"record": "10.5281/zenodo.7023258", "creator": "Steinweg, Nina", "type": "other"}, {"record": "10.5281/zenodo.1118382", "creator": "MahmoudHashemi, Azadeh", "type": "presentation"}, {"record": "10.5281/zenodo.1118382", "creator": "M\u00fchlbauer, Alexander", "type": "presentation"}, {"record": "10.5281/zenodo.1118382", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.1118391", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.1118391", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.1118391", "creator": "M\u00fchlbauer, Alexander", "type": "presentation"}, {"record": "10.5281/zenodo.5180976", "creator": "Veronika Keck", "type": "publication"}, {"record": "10.5281/zenodo.5180976", "creator": "Doroth\u00e9e Behr", "type": "publication"}, {"record": "10.5281/zenodo.5180976", "creator": "Brita Dorer", "type": "publication"}, {"record": "10.5281/zenodo.259565", "creator": "M\u00fcller, Stefan", "type": "presentation"}, {"record": "10.5281/zenodo.259565", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.259565", "creator": "Schweers, Stefan", "type": "presentation"}, {"record": "10.5281/zenodo.4621051", "creator": "Borschewski, Kerrin", "type": "publication"}, {"record": "10.5281/zenodo.4621051", "creator": "Akdeniz, Esra", "type": "publication"}, {"record": "10.5281/zenodo.4621051", "creator": "Piesch, Sophia", "type": "publication"}, {"record": "10.5281/zenodo.7143302", "creator": "Mayr, Philipp", "type": "presentation"}, {"record": "10.5281/zenodo.7143302", "creator": "Backes, Tobias", "type": "presentation"}, {"record": "10.5281/zenodo.7143302", "creator": "Shahid, Muhammad Ahsan", "type": "presentation"}, {"record": "10.5281/zenodo.4581806", "creator": "Veronika Keck", "type": "publication"}, {"record": "10.5281/zenodo.4581806", "creator": "Doroth\u00e9e Behr", "type": "publication"}, {"record": "10.5281/zenodo.4581806", "creator": "Brita Dorer", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Esra Akdeniz", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Kerrin Borschewski", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Katrin Baum", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Libby Bishop", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Fr\u00f6hling, Leon", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Sen, Indira", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Soldner, Felix", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Zens, Maria", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Weller, Katrin", "type": "publication"}, {"record": "10.5281/zenodo.1118384", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.1118384", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.3582020", "creator": "Akdeniz, Esra", "type": "presentation"}, {"record": "10.5281/zenodo.3582020", "creator": "Kr\u00e4mer, Thomas", "type": "presentation"}, {"record": "10.5281/zenodo.3597408", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.3597408", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.4518893", "creator": "Weller, Katrin", "type": "presentation"}, {"record": "10.5281/zenodo.4518893", "creator": "Watteler, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.7464990", "creator": "Bishop, Elizabeth", "type": "presentation"}, {"record": "10.5281/zenodo.7464990", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.3620845", "creator": "Borschewski, Kerrin", "type": "presentation"}, {"record": "10.5281/zenodo.3620845", "creator": "Hausstein, Brigitte", "type": "presentation"}, {"record": "10.5281/zenodo.2660928", "creator": "Weller, Katrin", "type": "poster"}, {"record": "10.5281/zenodo.2660928", "creator": "Zagovora, Olya", "type": "poster"}, {"record": "10.5281/zenodo.3955711", "creator": "Wolf, Christof", "type": "presentation"}, {"record": "10.5281/zenodo.3955711", "creator": "Miller, Bernhard", "type": "presentation"}, {"record": "10.5281/zenodo.439699", "creator": "Fabian Fl\u00f6ck", "type": "dataset"}, {"record": "10.5281/zenodo.439699", "creator": "Kenan Erdogan", "type": "dataset"}, {"record": "10.5281/zenodo.3781700", "creator": "Alexia Katsanidou", "type": "presentation"}, {"record": "10.5281/zenodo.3781700", "creator": "Markus Quandt", "type": "presentation"}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-6611fae942daa1806e245b7723550b80"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "type", "type": "nominal"}, "x": {"aggregate": "count", "type": "quantitative"}, "y": {"field": "creator", "type": "nominal"}}, "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json", "datasets": {"data-6611fae942daa1806e245b7723550b80": [{"record": "10.5281/zenodo.5914219", "creator": "Zhang, Yudong", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Baran, Erdal", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Zloch, Matth\u00e4us", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "M\u00fchlbauer, Alexander", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Klas, Claus-Peter", "type": "software"}, {"record": "10.5281/zenodo.5914219", "creator": "Mutschke, Peter", "type": "software"}, {"record": "10.5281/zenodo.259554", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.259554", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.259554", "creator": "M\u00fchlbauer, Alexander", "type": "presentation"}, {"record": "10.5281/zenodo.259554", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Kr\u00e4mer, Thomas", "type": "presentation"}, {"record": "10.5281/zenodo.6630263", "creator": "Nugraha, Sigit", "type": "presentation"}, {"record": "10.5281/zenodo.7023258", "creator": "Geisler, Helena", "type": "other"}, {"record": "10.5281/zenodo.7023258", "creator": "L\u00f6ther, Andrea", "type": "other"}, {"record": "10.5281/zenodo.7023258", "creator": "Steinweg, Nina", "type": "other"}, {"record": "10.5281/zenodo.7024958", "creator": "Geisler, Helena", "type": "other"}, {"record": "10.5281/zenodo.7024958", "creator": "L\u00f6ther, Andrea", "type": "other"}, {"record": "10.5281/zenodo.7024958", "creator": "Steinweg, Nina", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Lipinsky, Anke", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Schredl, Claudia", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Baumann, Horst", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Lomazzi, Vera", "type": "other"}, {"record": "10.5281/zenodo.7220636", "creator": "Freund, Frederike", "type": "other"}, {"record": "10.5281/zenodo.259565", "creator": "M\u00fcller, Stefan", "type": "presentation"}, {"record": "10.5281/zenodo.259565", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.259565", "creator": "Schweers, Stefan", "type": "presentation"}, {"record": "10.5281/zenodo.4621051", "creator": "Borschewski, Kerrin", "type": "publication"}, {"record": "10.5281/zenodo.4621051", "creator": "Akdeniz, Esra", "type": "publication"}, {"record": "10.5281/zenodo.4621051", "creator": "Piesch, Sophia", "type": "publication"}, {"record": "10.5281/zenodo.7143302", "creator": "Mayr, Philipp", "type": "presentation"}, {"record": "10.5281/zenodo.7143302", "creator": "Backes, Tobias", "type": "presentation"}, {"record": "10.5281/zenodo.7143302", "creator": "Shahid, Muhammad Ahsan", "type": "presentation"}, {"record": "10.5281/zenodo.4581806", "creator": "Veronika Keck", "type": "publication"}, {"record": "10.5281/zenodo.4581806", "creator": "Doroth\u00e9e Behr", "type": "publication"}, {"record": "10.5281/zenodo.4581806", "creator": "Brita Dorer", "type": "publication"}, {"record": "10.5281/zenodo.1118382", "creator": "MahmoudHashemi, Azadeh", "type": "presentation"}, {"record": "10.5281/zenodo.1118382", "creator": "M\u00fchlbauer, Alexander", "type": "presentation"}, {"record": "10.5281/zenodo.1118382", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.1118391", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.1118391", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.1118391", "creator": "M\u00fchlbauer, Alexander", "type": "presentation"}, {"record": "10.5281/zenodo.5180976", "creator": "Veronika Keck", "type": "publication"}, {"record": "10.5281/zenodo.5180976", "creator": "Doroth\u00e9e Behr", "type": "publication"}, {"record": "10.5281/zenodo.5180976", "creator": "Brita Dorer", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Fr\u00f6hling, Leon", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Sen, Indira", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Soldner, Felix", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Zens, Maria", "type": "publication"}, {"record": "10.5281/zenodo.8386418", "creator": "Weller, Katrin", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Esra Akdeniz", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Kerrin Borschewski", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Katrin Baum", "type": "publication"}, {"record": "10.5281/zenodo.7638506", "creator": "Libby Bishop", "type": "publication"}, {"record": "10.5281/zenodo.3582020", "creator": "Akdeniz, Esra", "type": "presentation"}, {"record": "10.5281/zenodo.3582020", "creator": "Kr\u00e4mer, Thomas", "type": "presentation"}, {"record": "10.5281/zenodo.7464990", "creator": "Bishop, Elizabeth", "type": "presentation"}, {"record": "10.5281/zenodo.7464990", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.4518893", "creator": "Weller, Katrin", "type": "presentation"}, {"record": "10.5281/zenodo.4518893", "creator": "Watteler, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.1118384", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.1118384", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.3597408", "creator": "Klas, Claus-Peter", "type": "presentation"}, {"record": "10.5281/zenodo.3597408", "creator": "Hopt, Oliver", "type": "presentation"}, {"record": "10.5281/zenodo.3781700", "creator": "Alexia Katsanidou", "type": "presentation"}, {"record": "10.5281/zenodo.3781700", "creator": "Markus Quandt", "type": "presentation"}, {"record": "10.5281/zenodo.3776982", "creator": "David Schiller", "type": "presentation"}, {"record": "10.5281/zenodo.3776982", "creator": "Katharina Kinder-Kurlanda", "type": "presentation"}, {"record": "10.5281/zenodo.1118393", "creator": "Akdeniz, Esra", "type": "presentation"}, {"record": "10.5281/zenodo.1118393", "creator": "Zenk-M\u00f6ltgen, Wolfgang", "type": "presentation"}, {"record": "10.5281/zenodo.1134531", "creator": "Winters, Kristi", "type": "poster"}, {"record": "10.5281/zenodo.1134531", "creator": "Friedrichs, Martin", "type": "poster"}, {"record": "10.5281/zenodo.7149418", "creator": "Philipp Mayr", "type": "presentation"}, {"record": "10.5281/zenodo.7149418", "creator": "Tobias Backes", "type": "presentation"}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 </div>
@@ -4426,7 +4476,7 @@ position: relative;
 <section id="get-metadata" class="level3">
 <h3 class="anchored" data-anchor-id="get-metadata">Get metadata</h3>
 <p>Here is the metadata of a record that was completed on the Zenodo page. We provide a json dump.</p>
-<div class="cell" data-execution_count="22">
+<div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(<span class="st">&quot;https://zenodo.org/api/records/8421233&quot;</span>)</span>
@@ -4436,20 +4486,20 @@ position: relative;
 <span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(json.dumps(metadata, indent<span class="op">=</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{
-  &quot;title&quot;: &quot;Harmonizing and linking party information: The ESS as an example of complex data linking&quot;,
+  &quot;title&quot;: &quot;Linking European Social Survey (ESS) party information&quot;,
   &quot;doi&quot;: &quot;10.5281/zenodo.8421233&quot;,
   &quot;publication_date&quot;: &quot;2023-10-09&quot;,
-  &quot;description&quot;: &quot;&lt;p&gt;Combining party information from multiple sources is a work-intensive challenge for quantitative studies of political representation. Differences in the definition of political parties and difficult data structures can make linking party information across datasets challenging. The European Social Survey (ESS) is an example of a prominent data source in political science research whose party information is particularly difficult to work with. Here, we demonstrate how Party Facts, an online infrastructure for combining party information, can be used to link different social science datasets and assess the performance of the linking process. In this article, we discuss the difficulties of complex linking tasks and show how the ESS can be combined with other sources. We have updated the database to include appropriate links for the recent Round 10 of the ESS and provide two examples of complex linking by combining the ESS with the Chapel Hill Expert Survey (CHES) and with the Parliament and Government Database (ParlGov).&lt;/p&gt;&quot;,
+  &quot;description&quot;: &quot;&lt;p&gt;R code for linking &lt;a href=\&quot;https://www.europeansocialsurvey.org/\&quot;&gt;European Social Survey (ESS)&lt;/a&gt; party information from Rounds 1\u201310 with social science datasets through &lt;a href=\&quot;partyfacts.org\&quot;&gt;Party Facts&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Two examples for linking ESS parties with the &lt;a href=\&quot;https://www.chesdata.eu/\&quot;&gt;Chapel Hill Expert Survey (CHES)&lt;/a&gt; and the &lt;a href=\&quot;parlgov.org\&quot;&gt;Parliament and Government Database (ParlGov)&lt;/a&gt; are provided in notebooks.&lt;/p&gt;&lt;p&gt;These examples are presented in a website at &lt;a href=\&quot;https://hdigital.github.io/ess-linking/\&quot;&gt;hdigital.github.io/ess-linking&lt;/a&gt;.&lt;/p&gt;&quot;,
   &quot;access_right&quot;: &quot;open&quot;,
   &quot;creators&quot;: [
     {
-      &quot;name&quot;: &quot;Paul Bederke&quot;,
+      &quot;name&quot;: &quot;Bederke, Paul&quot;,
       &quot;affiliation&quot;: &quot;University of Konstanz, Germany&quot;,
       &quot;orcid&quot;: &quot;0000-0001-7555-8656&quot;
     },
     {
-      &quot;name&quot;: &quot;Holger D\u00f6ring&quot;,
-      &quot;affiliation&quot;: &quot;GESIS \u2013 Leibniz Institute for the Social Sciences, Germany&quot;,
+      &quot;name&quot;: &quot;D\u00f6ring, Holger&quot;,
+      &quot;affiliation&quot;: &quot;GESIS - Leibniz-Institute for the Social Sciences&quot;,
       &quot;orcid&quot;: &quot;0000-0002-6616-8805&quot;
     }
   ],
@@ -4474,7 +4524,7 @@ position: relative;
     &quot;type&quot;: &quot;software&quot;
   },
   &quot;license&quot;: {
-    &quot;id&quot;: &quot;other-open&quot;
+    &quot;id&quot;: &quot;mit-license&quot;
   },
   &quot;relations&quot;: {
     &quot;version&quot;: [
@@ -4498,7 +4548,7 @@ position: relative;
 <p><a href="https://developers.zenodo.org/#github" class="uri">https://developers.zenodo.org/#github</a></p>
 <p>This allows you to almost fully automate the data archiving without adding information manually in Zenodo.</p>
 <p>Here is a version of the <code>.zenodo.json</code> we created. It includes only the metadata that Zenodo can not extract from other GitHub information.</p>
-<div class="cell" data-execution_count="23">
+<div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>zenodo_json <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="st">{</span></span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="st">  &quot;title&quot;: &quot;Harmonizing and linking party information: The ESS as an example of complex data linking&quot;,</span></span>
@@ -4530,11 +4580,11 @@ position: relative;
 <span id="cb46-29"><a href="#cb46-29" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s check if the json is valid and can be loaded in Python.</p>
-<div class="cell" data-execution_count="24">
+<div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>zenodo_dict <span class="op">=</span> json.loads(zenodo_json)</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(zenodo_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>5</code></pre>
 </div>
 </div>
@@ -4542,10 +4592,10 @@ position: relative;
 <section id="get-license-id" class="level3">
 <h3 class="anchored" data-anchor-id="get-license-id">Get license id</h3>
 <p>This is how we found the license <em>id</em> – see <a href="https://developers.zenodo.org/?python#licenses" class="uri">https://developers.zenodo.org/?python#licenses</a></p>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">&quot;https://zenodo.org/api/licenses&quot;</span>, params<span class="op">=</span>{<span class="st">&quot;q&quot;</span>: <span class="st">&quot;id:mit&quot;</span>})</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>response.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>{&#39;hits&#39;: {&#39;hits&#39;: [{&#39;id&#39;: &#39;mit&#39;,
     &#39;created&#39;: &#39;2023-10-12T17:24:20.716475+00:00&#39;,
     &#39;updated&#39;: &#39;2023-10-12T17:24:20.758570+00:00&#39;,
@@ -4580,12 +4630,12 @@ position: relative;
 <section id="book-reference" class="level3">
 <h3 class="anchored" data-anchor-id="book-reference">Book reference</h3>
 <p>As always in this notebook, there is an API to access metadata. Here, we use the <a href="https://openlibrary.org/dev/docs/api/books">Open Library Books API</a> to get the metadata with the book’s ISBN.</p>
-<div class="cell" data-execution_count="32">
+<div class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(<span class="st">&quot;https://openlibrary.org/isbn/9781718502703.json&quot;</span>)</span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>book <span class="op">=</span> r.json()</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>book</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>{&#39;type&#39;: {&#39;key&#39;: &#39;/type/edition&#39;},
  &#39;authors&#39;: [{&#39;key&#39;: &#39;/authors/OL7634726A&#39;}],
  &#39;isbn_13&#39;: [&#39;9781718502703&#39;],
@@ -4605,17 +4655,17 @@ position: relative;
   &#39;value&#39;: &#39;2022-11-15T08:14:57.012982&#39;}}</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="35">
+<div class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f&quot;https://openlibrary.org/</span><span class="sc">{</span>book[<span class="st">&#39;authors&#39;</span>][<span class="dv">0</span>][<span class="st">&#39;key&#39;</span>]<span class="sc">}</span><span class="ss">.json&quot;</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>url</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>&#39;https://openlibrary.org//authors/OL7634726A.json&#39;</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="36">
+<div class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(url)</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>r.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>{&#39;name&#39;: &#39;Eric Matthes&#39;,
  &#39;created&#39;: {&#39;type&#39;: &#39;/type/datetime&#39;, &#39;value&#39;: &#39;2019-10-04T05:26:31.796765&#39;},
  &#39;last_modified&#39;: {&#39;type&#39;: &#39;/type/datetime&#39;,
@@ -4650,7 +4700,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();  
+  toggleBodyColorPrimary();
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -4660,7 +4710,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
+      if (clz.startsWith('code-annotation-')) {
         return true;
       }
     }
@@ -4691,11 +4741,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
       button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
+      tooltip = new bootstrap.Tooltip(button,
+        { trigger: "manual",
           customClass: "code-copy-button-tooltip",
           offset: [0, -8]});
-      tooltip.show();    
+      tooltip.show();
     }
     setTimeout(function() {
       if (tooltip) {
@@ -4725,7 +4775,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       theme: 'quarto',
       placement: 'bottom-start'
     };
-    window.tippy(el, config); 
+    window.tippy(el, config);
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
@@ -4770,7 +4820,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             height = bottom - top;
           }
           if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
+            // cook up a div (if necessary) and position it
             let div = window.document.getElementById("code-annotation-line-highlight");
             if (div === null) {
               div = window.document.createElement("div");

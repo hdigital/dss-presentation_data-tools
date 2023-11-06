@@ -1,7 +1,11 @@
-# Archiving APIs presentation · 📽️
+# DSS presentation APIs · 📽️
+
+<https://hdigital.github.io/dss-presentation_data-tools/>
 
 ```sh
 quarto render dss-data-presentation.ipynb
+
+quarto publish gh-pages
 ```
 
 Add a Zenodo API key to an `.env` file to access [Zenodo REST API](https://developers.zenodo.org/) — see [`.env.example`](.env.example)
